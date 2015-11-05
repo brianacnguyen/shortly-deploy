@@ -81,7 +81,13 @@ module.exports = function(grunt) {
         },
 
         shell: {
-            prodServer: {}
+            multiple: {
+              command: [
+                'git add .',
+                'git commit -m "deploying changes"',
+                'git push heroku master'
+              ].join('&&')
+            }
         },
     });
 
@@ -126,9 +132,7 @@ module.exports = function(grunt) {
 
     grunt.registerTask('upload', function(n) {
         if (grunt.option('prod')) {
-            // something to upload to heroku
-            // grunt deploy --prod
-            // grunt.task.run(['heroku:production']);
+            grunt.task.run(['shell']);
         } else {
             grunt.task.run(['server-dev']);
         }
