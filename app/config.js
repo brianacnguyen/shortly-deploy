@@ -43,8 +43,12 @@
 // });
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
+if (process.env.MONGOLAB_URI) {
+  mongoose.connect(process.env.MONGOLAB_URI);
+} else {
+  mongoose.connect('mongodb://localhost/shortly');
+}
 
-mongoose.connect('mongodb://localhost/shortly');
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 // db.once('open', function (callback) {
