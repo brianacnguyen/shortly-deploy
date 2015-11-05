@@ -138,5 +138,5 @@ module.exports = function(grunt) {
         'build',
         'upload'
     ]);
-    grunt.registerTask('heroku:production', ['build']);
+    grunt.registerTask('heroku:production', grunt.task.run(['build']));
 };
