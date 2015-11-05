@@ -7,8 +7,8 @@
   "license": "Proprietary",
   "private": true,
   "scripts": {
-    "start": "node index.js",
-    "postinstall": "grunt uglify cssmin"
+    "start": "node index.js"
+    // "postinstall": "grunt uglify cssmin"
   },
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",

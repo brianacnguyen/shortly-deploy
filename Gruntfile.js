@@ -138,5 +138,5 @@ module.exports = function(grunt) {
         'build',
         'upload'
     ]);
-    // grunt.registerTask('heroku:production', 'uglify cssmin jshint csslint mochaTest');
+    grunt.registerTask('heroku:production', 'uglify cssmin jshint csslint mochaTest');
 };
