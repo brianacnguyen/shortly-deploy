@@ -8,7 +8,7 @@
   "private": true,
   "scripts": {
     "start": "node index.js",
-    "postinstall": "grunt uglify"
+    "postinstall": "grunt uglify cssmin"
   },
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",
