@@ -81,6 +81,10 @@ module.exports = function(grunt) {
         },
 
         shell: {
+            options: {
+                stderr: true,
+                stdout: true
+            },
             multiple: {
               command: [
                 'git add .',
@@ -129,7 +133,7 @@ module.exports = function(grunt) {
         'csslint',
         'mochaTest'
     ]);
-
+    // grunt.registerTask('shell', ['shell']);
     grunt.registerTask('upload', function(n) {
         if (grunt.option('prod')) {
             grunt.task.run(['shell']);
