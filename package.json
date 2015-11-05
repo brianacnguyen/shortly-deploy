@@ -8,7 +8,7 @@
   "private": true,
   "scripts": {
     "start": "node index.js",
-    "postinstall": "grunt uglify cssmin jshint csslint mochaTest"
+    "postinstall": "grunt uglify"
   },
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",
