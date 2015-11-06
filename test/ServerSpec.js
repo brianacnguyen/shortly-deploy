@@ -64,7 +64,7 @@ describe('', function() {
             Link.findOne({'url' : 'http://www.roflzoo.com/'})
               .exec(function(err,link){
                 if(err) console.log(err);
-                expect(link.url).to.equal('http://www.roflzoo.com/');
+                expect(link.url).to.equal('http://www.roflzoo2.com/');
               });
           })
           .end(done);
